@@ -3,6 +3,7 @@
  * Pasando valores de variable primitivas
  * ===================================================
 */
+
 function imprimir(nombre, apellido) { 
    console.log(nombre + " " + apellido);
 }
@@ -12,13 +13,13 @@ imprimir("Juan", "Juanes");
 /** 
  * Si yo no mando el apellido, imprmiria undefined,
  * ya que cuando es definido en la function, se reserva espacio en memoria con valor indefinido.
- * Al no pasarle el valor, solo muestra el conteenido que tiene actualmente, el undefined
+ * Al no pasarle el valor, solo muestra el contenido que tiene actualmente: undefined.
  * */ 
 imprimir("Juan"); //Juan undefined
 
 
 /** 
- * Si yono mando nada, imprimiria undefined undefined
+ * Si yo no mando nada, imprimiria undefined undefined
 */
 imprimir();  //undefined undefined
 
@@ -36,7 +37,6 @@ function imprimir2(nombre) {
 /** 
  * Una forma de asignar un valor por default si no viene el parametro, es la siguiente:
 */
-
 function imprimir3(nombre, apellido) { 
    // if (apellido === undefined) {
    //    apellido = "xxx";
@@ -62,7 +62,7 @@ function imprimir4( persona ) {
 
 }
 
-//En JS tambien podemos pasar objetos anonimos o definidos como parametros
+//En JS tambien podemos pasar objetos anónimos o definidos como parametros
 imprimir4({
    nombre: "Juanin",
    apellido: "Bananin"
@@ -79,7 +79,6 @@ imprimir4(obj); // Ruperto Rupertin
 /**
  * Modificando un valor del parametro
  */
-
 function imprimir4(persona) {
    console.log(persona.nombre + " " + persona.apellido);
    persona.nombre = "Jhon";
@@ -90,7 +89,7 @@ var obj = {
    apellido: "Miro"
 };
 
-imprimir4(obj); // ramiro Miro
+imprimir4(obj); // Ramiro Miro
 console.log(obj); //Object { nombre: "Jhon", apellido: "Miro" }
 
 /** 
@@ -112,11 +111,11 @@ function imprimirFn(fn) {
 }
 
 /**
- * Pasando na función anónimau
+ * Pasando una función anónima
 */
 imprimirFn(function () {
-   console.log('Esta es una funcion anónima');
-});
+   console.log('Esta es una función anónima');
+}); //Esta es una función anónima
 
  /** 
   * Pasando una función explicita
@@ -124,7 +123,7 @@ imprimirFn(function () {
 var fnExplicita = function () {
    console.log('Soy una función explicita'); 
 };
-imprimirFn(fnExplicita);
+imprimirFn(fnExplicita); //Esta es una funci/on explicita
 
 
 
@@ -142,6 +141,5 @@ function miFuncion(param1, param2, param3, param4) {
    console.log(param1);
 }
 
-
-// El orden en que pasemos los parametros es el orden en que seran recibidos
+// El orden en que pasemos los parametros es el orden en que serán recibidos
 miFuncion("valor1", "valor2", "valor3", "valor4");
