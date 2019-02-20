@@ -1,5 +1,5 @@
 /**
- * Una Funcion puede regresar:
+ * Una Función puede regresar:
  * Tipo primitivo (string, number, boolean, symbol)
  * undefined
  * Objeto
@@ -33,12 +33,12 @@ function obtenerAleatorio() {
    return Math.random();
 }
 
-// console.log(obtenerAleatorio()); //Numero aleatorio
+// console.log(obtenerAleatorio()); //Número aleatorio
 
 /**
- *Esta función valida si el numero es mayor a 0.5
+ *Esta función valida si el número es mayor a 0.5
  *
- * @returns {boolean} Regresa un valor booleano verdadero si se cumple la condicion
+ * @returns {boolean} Regresa un valor booleano verdadero si se cumple la condición
  */
 function esMayor05() { 
    if (obtenerAleatorio() > 0.5) {
@@ -52,7 +52,7 @@ function esMayor05() {
 
 
 /** 
- * Podemos hacer una toma de desiciones con lo que retorna la funcion
+ * Podemos hacer una toma de decisiones con lo que retorna la función
 */
 if (esMayor05()) {
    console.log("Es mayor a 0.5");
@@ -63,13 +63,13 @@ if (esMayor05()) {
 
 /** 
  * ==============================================
- * Funcion que regresa Objetos
+ * Función que regresa Objetos
  * ==============================================
  */
-//Las funciones pueden regresar objetos anonimos o explicitos,
+//Las funciones pueden regresar objetos anónimos o explicitos,
 
 /**
- * Esta funcion regresa un objeto con los parametros dados
+ * Esta función regresa un objeto con los parámetros dados
  * @param {string} nombre 
  * @param {string} apellido 
  * @returns {object} Objeto creado
@@ -81,14 +81,14 @@ function crearPersona(nombre, apellido) {
    };
    return obj;
 }
-//Hay que saber cuando regresar un objeto eplicito, en este caso como solo regresa
-//los parametros mismos, no es necesario definir el objeto, no podemoos ahorrar
+//Hay que saber cuando regresar un objeto explicito, en este caso como solo regresa
+//los parámetros mismos, no es necesario definir el objeto, nos podemoos ahorrar
 //espacio en memoria.
 console.log(crearPersona("Maria", "Magdalena")); //Object { nombre: "Maria", apellido: "Magdalena" }
 
 
 /**
- * Esta funcion regresa un objeto con los parametros dados
+ * Esta función regresa un objeto con los parámetros dados
  * @param {string} nombre 
  * @param {string} apellido 
  * @returns {object} Objeto creado
@@ -118,7 +118,7 @@ console.log(persona.apellido); //Doe
 /**
  *Esta función regresa una función anónima
  *
- * @returns {function} Regresa una funcion anonima
+ * @returns {function} Regresa una función anónima
  */
 function crearFuncion() { 
    return function () {
@@ -127,7 +127,7 @@ function crearFuncion() {
 }
 
 var nuevaFuncion = crearFuncion();
-//Como mi variable esta igualada a una funcion, la invocamos de la sig. manera
+//Como mi variable esta igualada a una función, la invocamos de la sig. manera
 nuevaFuncion();
 
 
@@ -149,7 +149,7 @@ function crearFuncion2() {
 console.log("===============================================");
 var nuevaFuncion = crearFuncion2();
 console.log(nuevaFuncion); //function crearFuncion2()
-//Podemos pasar parametros
+//Podemos pasar parámetros
 nuevaFuncion(persona.nombre); //Me creó John
 /*--------------------------------------------------------------- */
 console.log("===============================================");

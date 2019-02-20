@@ -24,7 +24,7 @@ imprimir("Juan"); //Juan undefined
 imprimir();  //undefined undefined
 
 
-/** Si elimino el parametro y quiero imprimir algo que no existe, marcaria ERROR, 
+/** Si elimino el parámetro y quiero imprimir algo que no existe, marcaria ERROR, 
  * ya que no existe dicha propiedad. No existe en el objeto window.
 */
 
@@ -35,7 +35,7 @@ function imprimir2(nombre) {
 //imprimir2(); //Error: apellido is not defined
 
 /** 
- * Una forma de asignar un valor por default si no viene el parametro, es la siguiente:
+ * Una forma de asignar un valor por default si no viene el parámetro, es la siguiente:
 */
 function imprimir3(nombre, apellido) { 
    // if (apellido === undefined) {
@@ -52,7 +52,7 @@ imprimir3(); // undefined xxx
 
 /** 
  * ===================================================
- * Podemos pasar Obejtos como parametros
+ * Podemos pasar Obejtos como parámetros
  * ===================================================
  */
 
@@ -62,7 +62,7 @@ function imprimir4( persona ) {
 
 }
 
-//En JS tambien podemos pasar objetos anónimos o definidos como parametros
+//En JS tambien podemos pasar objetos anónimos o definidos como parámetros
 imprimir4({
    nombre: "Juanin",
    apellido: "Bananin"
@@ -77,7 +77,7 @@ imprimir4(obj); // Ruperto Rupertin
 
 
 /**
- * Modificando un valor del parametro
+ * Modificando un valor del parámetro
  */
 function imprimir4(persona) {
    console.log(persona.nombre + " " + persona.apellido);
@@ -93,7 +93,7 @@ imprimir4(obj); // Ramiro Miro
 console.log(obj); //Object { nombre: "Jhon", apellido: "Miro" }
 
 /** 
- * NOTA: Al modificar el valor del parametro persona.nombre = "Jhon",
+ * NOTA: Al modificar el valor del parámetro persona.nombre = "Jhon",
  * el valor del objeto original cambia, ya que los valores del objeto se asignan por referencia.
  * Hay que tener cuidado con los objetos cuando se modifican sus valores.
  */
@@ -101,12 +101,12 @@ console.log(obj); //Object { nombre: "Jhon", apellido: "Miro" }
 
 /**
  * ===================================================
- * Pasando Funciones como parametro
+ * Pasando Funciones como parámetro
  * ===================================================
  */
 
 function imprimirFn(fn) { 
-   //Recibe como parametro la función y la ejecuta invocando el parametro como una función
+   //Recibe como parámetro la función y la ejecuta invocando el parámetro como una función
    fn();
 }
 
@@ -123,7 +123,7 @@ imprimirFn(function () {
 var fnExplicita = function () {
    console.log('Soy una función explicita'); 
 };
-imprimirFn(fnExplicita); //Esta es una funci/on explicita
+imprimirFn(fnExplicita); //Esta es una función explicita
 
 
 
@@ -133,7 +133,7 @@ imprimirFn(fnExplicita); //Esta es una funci/on explicita
  * ===================================================
  */
 
- //Las funciones siempre reciben los parametros con un orden.
+ //Las funciones siempre reciben los parámetros con un orden.
 function miFuncion(param1, param2, param3, param4) {
    console.log(param4);
    console.log(param3);
@@ -141,5 +141,5 @@ function miFuncion(param1, param2, param3, param4) {
    console.log(param1);
 }
 
-// El orden en que pasemos los parametros es el orden en que serán recibidos
+// El orden en que pasemos los parámetros es el orden en que serán recibidos
 miFuncion("valor1", "valor2", "valor3", "valor4");
