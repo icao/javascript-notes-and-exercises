@@ -19,7 +19,7 @@ const saludo = function () {
 }
 
 // Se invoca usando al variuable.
-saludo();
+saludo(); //Hola Campeón!!!
 // Asignamos una función anónima en una variable, 
 // luego usamos esa variable para invocar la función agregando paréntesis() al final.
 
@@ -45,7 +45,7 @@ function saludar(mensaje, nombre) {
 
 // Pasamos a decirHola() como un argumento a la función saludar()
 // esto explica cómo estamos tratando la función como un valor.
-saludar(decirHola, 'Cesar');
+saludar(decirHola, 'Cesar'); //Hola :D Cesar !!!
 
 //NOTA: La función que pasamos como argumento a otra función, se llama función Callback. 
 //'saludar' es una función Callback.
@@ -64,13 +64,13 @@ function mandarSaludo() {
 //podemos devolver una función porque tratamos la función en JavaScript como un valor.
 const mensaje = mandarSaludo(); //Se asigna el retorno a mensaje
 //Como mensaje tiene ahora el valor de una función anónima, la ejecutamos.
-mensaje();
+mensaje(); //Regresando una función anónima
 
 //NOTA: Una función que devuelve una función se denomina "función de orden superior".
 
 /** 
  * De vuelta a nuestro ejemplo;
- * Ahora, necesitamos invocar la función sayHello y su función anónima devuelta.
+ * Ahora, necesitamos invocar la función mandarSaludo y su función anónima devuelta.
  * Para ello, tenemos dos formas:
 */
 
@@ -84,7 +84,7 @@ const mandarSaludo2 = function () {
 }
 
 const mensaje2 = mandarSaludo2();
-mensaje2();
+mensaje2(); //Regresando una función anónima 2
 //Tienes que usar otra variable(mensaje2). 
 //Si invocó mandarSaludo2 directamente, 
 //devolvería la función en sí sin invocar su función devuelta.
@@ -98,5 +98,5 @@ function mandarMensaje3() {
    }
 }
 
-mandarMensaje3()();
+mandarMensaje3()(); //Regresando una función anónima 3
 //También estamos utilizando paréntesis dobles()() para invocar la función devuelta.
