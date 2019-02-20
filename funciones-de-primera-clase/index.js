@@ -30,7 +30,6 @@ saludo();
  * Ejemplo: Pasando una función como un argumento
  * =================================================
  */
-
 function decirHola() {
    return 'Hola :D';
 }
@@ -50,3 +49,54 @@ saludar(decirHola, 'Cesar');
 
 //NOTA: La función que pasamos como argumento a otra función, se llama función Callback. 
 //'saludar' es una función Callback.
+
+/**
+ * =================================================
+ * Ejemplo: Regresando una función
+ * =================================================
+ */
+function mandarSaludo() {
+   return function () {
+      console.log('Regresando una función anónima');
+   }
+}
+//Necesitamos devolver una función desde otra función: 
+//podemos devolver una función porque tratamos la función en JavaScript como un valor.
+const mensaje = mandarSaludo(); //Se asigna el retorno a mensaje
+//Como mensaje tiene ahora el valor de una función anónima, la ejecutamos.
+mensaje();
+
+//NOTA: Una función que devuelve una función se denomina "función de orden superior".
+
+/** 
+ * De vuelta a nuestro ejemplo;
+ * Ahora, necesitamos invocar la función sayHello y su función anónima devuelta.
+ * Para ello, tenemos dos formas:
+*/
+
+/** 
+ * 1.- Usando una variable
+*/
+const mandarSaludo2 = function () {
+   return function () {
+      console.log('Regresando una función anónima 2');
+   }
+}
+
+const mensaje2 = mandarSaludo2();
+mensaje2();
+//Tienes que usar otra variable(mensaje2). 
+//Si invocó mandarSaludo2 directamente, 
+//devolvería la función en sí sin invocar su función devuelta.
+
+/** 
+ * 2.- Usando doble parentesis
+*/
+function mandarMensaje3() {
+   return function () {
+      console.log('Regresando una función anónima 3');
+   }
+}
+
+mandarMensaje3()();
+//También estamos utilizando paréntesis dobles()() para invocar la función devuelta.
