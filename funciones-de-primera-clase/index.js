@@ -18,7 +18,7 @@ const saludo = function () {
    console.log(`Hola Campeón!!!`);
 }
 
-// Se invoca usando al variuable.
+// Se invoca usando la variuable.
 saludo(); //Hola Campeón!!!
 // Asignamos una función anónima en una variable, 
 // luego usamos esa variable para invocar la función agregando paréntesis() al final.
@@ -48,7 +48,7 @@ function saludar(mensaje, nombre) {
 saludar(decirHola, 'Cesar'); //Hola :D Cesar !!!
 
 //NOTA: La función que pasamos como argumento a otra función, se llama función Callback. 
-//'saludar' es una función Callback.
+//'decirHola' es una función Callback.
 
 /**
  * =================================================

@@ -123,6 +123,7 @@ imprimirFn(function () {
 var fnExplicita = function () {
    console.log('Soy una función explicita'); 
 };
+
 imprimirFn(fnExplicita); //Esta es una función explicita
 
 
