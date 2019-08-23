@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Elements of session storage</title>
+</head>
+<body>
+<div id="root">
+    <!--        Code generated-->
+</div>
+<script>
+    const nameSstorage = sessionStorage.getItem('name');
+    const lastnameSstorage = sessionStorage.getItem('lastName');
+
+    console.log(nameSstorage);
+    console.log(lastnameSstorage);
+
+    const dato = document.createElement('h2'); // Create <h2> element
+    dato.innerHTML = `${nameSstorage} ${lastnameSstorage}`; // Insert Text name
+    document.querySelector('#root').appendChild(dato); //Append <h2> to <div> with id="root"
+</script>
+</body>
+</html>
