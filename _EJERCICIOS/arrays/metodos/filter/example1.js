@@ -90,3 +90,15 @@ function obtenerVotantes(personas) {
   return posiblesVotantes;
 }
 console.log(obtenerVotantes(personas));
+
+/**
+ * Filtra la matríz en función de un criterio de búsqueda (query)
+ */
+const frutas = ["durazno", "platano", "uvas", "mango", "naranja", 'manzana', 'melon', 'sandia', 'papaya', 'mamey', 'fresa', 'frambuesa'];
+
+function filtrarFrutasQuery(frutas, query) {
+  return frutas.filter(fruta => fruta.includes(query))
+}
+console.log(filtrarFrutasQuery(frutas, 'an'))
+console.log(filtrarFrutasQuery(frutas, 'esa'))
+console.log(filtrarFrutasQuery(frutas, 'no'))
