@@ -29,7 +29,7 @@ imprimir();  //undefined undefined
 */
 
 function imprimir2(nombre) {
-   console.log(nombre + " " + apellido);
+   console.log(nombre + " " + apellido); // apellido no existe dentro de este scope
 }
 
 //imprimir2(); //Error: apellido is not defined
@@ -59,7 +59,6 @@ imprimir3(); // undefined xxx
 function imprimir4( persona ) { 
    console.log(persona);
    console.log(persona.nombre + " " + persona.apellido);
-
 }
 
 //En JS tambien podemos pasar objetos anónimos o definidos como parámetros
@@ -124,6 +123,7 @@ var fnExplicita = function () {
    console.log('Soy una función explicita'); 
 };
 
+// A la función imprimirFn, le pasamos como argumento/parámetro la función fnExplicita
 imprimirFn(fnExplicita); //Esta es una función explicita
 
 
