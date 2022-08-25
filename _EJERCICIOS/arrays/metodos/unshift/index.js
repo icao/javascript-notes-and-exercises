@@ -5,9 +5,9 @@
  *
  * El método unshift() agrega/inserta uno o más elementos al inicio de un array,
  * y devuelve la nueva longitud del array.
- * Lo que se traduce a que el método ushift() MUTA el objeto array original.
+ * El método ushift() MUTA el objeto array original.
  *
- * Sintaxis:  array.unshift(elemento)
+ * Sintaxis:  array.unshift(elemento(s))
  */
 
 const arregloStrings = ["leon", "lobo", "tigre", "perro"];
