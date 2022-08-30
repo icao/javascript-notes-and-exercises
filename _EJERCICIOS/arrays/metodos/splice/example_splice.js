@@ -1,6 +1,3 @@
-// TODO: HACER LOS EJERCICIOS DE LA DOCUMENTACION: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-// TODO: HACER LOS EJERCICIOS DE: https://www.freecodecamp.org/espanol/news/javascript-splice-como-ulitizar-el-metodo-splice-de-arreglo-en-js/
-
 /**
  * Eliminar 0 elementos desde el índice 2 e insertar "Jhon Doe"
  *
@@ -72,14 +69,53 @@ console.log(mediosTransporte);
 /**
  * Eliminar 2 elementos desde el índice 2
  *
+ * Entrada: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio']
+ * Resultado: ['enero', 'febrero', 'mayo', 'junio']
+ *
+ * Eliminar 2 meses, marzo y abril
  */
+
+const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio"];
+// Apartir del index 2, eliminar 2, insertar 0
+meses.splice(2, 2);
+
+console.log(meses);
 
 /**
  * Eliminar 1 elemento desde el índice -2
  *
+ * Entrada: ['cesar', 'karime', 'carlos','carla', 'hachiko']
+ * Resultado: ['cesar', 'karime', 'carlos', 'hachiko']
+ *
+ * Eliminar el nombre de carla
  */
+
+const nombres = ["cesar", "karime", "carlos", "carla", "hachiko"];
+//Apartir del index -2, eliminar 1, insetar 0
+nombres.splice(-2, 1);
+
+console.log(nombres);
 
 /**
  * Eliminar todos los elementos tras el índice 2 (incl.)
  *
+ * Entrada: ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado']
+ * Resultado: ['domingo', 'lunes']
+ *
+ * Eliminar 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'
  */
+
+const dias = [
+  "domingo",
+  "lunes",
+  "martes",
+  "miercoles",
+  "jueves",
+  "viernes",
+  "sabado",
+];
+
+// Apartir del index 2, eliminar TODO, insertar 0
+dias.splice(2);
+
+console.log(dias);
