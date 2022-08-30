@@ -54,12 +54,15 @@ console.log(verduras)
 
 /** 
  * Eliminar 2 elementos desde el índice 2
+ * 
  */
 
 /** 
  * Eliminar 1 elemento desde el índice -2
+ * 
  */
 
 /** 
  * Eliminar todos los elementos tras el índice 2 (incl.)
+ * 
  */
