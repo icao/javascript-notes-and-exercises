@@ -27,9 +27,8 @@ console.log(todosJhons);
 const frutas = ["manzana", "platano", "piña", "coco"];
 
 // Apartir del primer elemento index 0, final index 1
-const fruta = frutas.slice(0, 1)
-console.log(fruta)
-
+const fruta = frutas.slice(0, 1);
+console.log(fruta);
 
 /**
  * Extraer el elemento con índice 3
@@ -42,6 +41,10 @@ console.log(fruta)
 
 const prioridad = ["primero", "segundo", "tercero", "cuarto", "quinto"];
 
+// Inicia apartir el index 3, final 4
+const prioridadFiltrada = prioridad.slice(3, 4);
+console.log(prioridadFiltrada);
+
 /**
  * Extraer el ultimo elemento del arreglo con indice 4 || arreglo.length
  *
@@ -52,6 +55,11 @@ const prioridad = ["primero", "segundo", "tercero", "cuarto", "quinto"];
  */
 
 const verduras = ["zanahoria", "pepino", "calabaza", "brocoli", "lechuga"];
+
+// Inicia apartir del elemento 4, final Ningun elemento
+const verdura = verduras.slice(4);
+// const verdura = verduras.slice(-1); // tambien es valido
+console.log(verdura);
 
 /**
  * Extraer 2 elementos desde el índice 1 al indice 2
