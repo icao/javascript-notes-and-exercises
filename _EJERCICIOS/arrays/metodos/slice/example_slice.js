@@ -9,6 +9,12 @@
 
 const jhons = ["Jhon Doe", "Jhoon Snow", "Jhon Wick", "Jhon Titor"];
 
+// Apartir del index 0, final sin especificar
+const todosJhons = jhons.slice(0);
+
+console.log(jhons);
+console.log(todosJhons);
+
 /**
  * Extraer el primer elemento que corresponde al index 0
  *
