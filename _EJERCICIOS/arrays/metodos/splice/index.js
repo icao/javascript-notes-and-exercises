@@ -17,9 +17,11 @@
  *
  * howMany: Número de elementos a remover.
  * Si es = 0 ó negativo. NO se eliminará ningún elemento
+ * PARAMETRO OPCIONAL
  *
  * element(s): Son los nuevos elementos que se van a agregar al array, empezando en el indice star(que se pasa como primer parametro a slice()).
  * Si no se especifica ningún elemento, splice() eliminará elementos del array.
+ * PARAMETRO OPCIONAL
  *
  */
 
