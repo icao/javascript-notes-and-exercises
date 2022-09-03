@@ -26,6 +26,11 @@ console.log(todosJhons);
 
 const frutas = ["manzana", "platano", "piña", "coco"];
 
+// Apartir del primer elemento index 0, final index 1
+const fruta = frutas.slice(0, 1)
+console.log(fruta)
+
+
 /**
  * Extraer el elemento con índice 3
  *
