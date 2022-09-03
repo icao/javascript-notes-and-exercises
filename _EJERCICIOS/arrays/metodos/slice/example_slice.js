@@ -62,7 +62,7 @@ const verdura = verduras.slice(4);
 console.log(verdura);
 
 /**
- * Extraer 2 elementos desde el índice 1 al indice 2
+ * Extraer 2 elementos apartir del índice 1
  *
  * Entrada: ['bicicleta', 'automovil', 'motocicleta', 'barco', 'avion']
  * Resultado: ['automovil', 'motocicleta']
@@ -78,6 +78,10 @@ const mediosTransporte = [
   "avion",
 ];
 
+// Inicia apartir del index 1, final index 3
+const transportes = mediosTransporte.slice(1, 3);
+console.log(transportes);
+
 /**
  * Extraer 1 elemento del índice -2
  *
@@ -88,6 +92,10 @@ const mediosTransporte = [
  */
 
 const nombres = ["cesar", "karime", "carlos", "carla", "hachiko"];
+
+// Incia aprtir del index -2, finaliza index -1
+const nombre = nombres.slice(-2, -1);
+console.log(nombre);
 
 /**
  * Extraer los ultimos 2 elementos.
@@ -107,3 +115,11 @@ const dias = [
   "viernes",
   "sabado",
 ];
+
+// Inicia apartir del index 5, finalzia sin especificar
+const dia = dias.slice(5);
+
+// Inicia apartir del index -2, finaliza sin especificar
+// const dia = dias.slice(-2); // Alternativamente con index negativo
+
+console.log(dia);
