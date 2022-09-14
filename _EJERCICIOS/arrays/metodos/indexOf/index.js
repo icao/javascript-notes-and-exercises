@@ -23,25 +23,18 @@
  *          -1 Si no es encontrado
  * */
 
-const arrayNumerico = [1, 2, 3, 4, 5];
-const index = arrayNumerico.indexOf(8);
-console.log(index); //-1
+const conjuntoNumeros = [2, 7, 1, 5, 3, 9, 1, 8, 9, 1];
 
-const existe = arrayNumerico.includes(8);
-console.log(existe); // false
+// Encuentra el primer elemento con el valor 2 y regresame el index
+console.log(conjuntoNumeros.indexOf(2)); // 0
+// Encuentra el primer elemento con el valor 10
+console.log(conjuntoNumeros.indexOf(10)); // -1 : NO EXISTE
+// Encuentra el primer elemento con el valor 1 y regresame el index
+console.log(conjuntoNumeros.indexOf(1)); // 2
+// Encuentra el primer elemento con el valor 1 apartir del index 5
+console.log(conjuntoNumeros.indexOf(1, 5)); // 6
+// Encuentra el primer elemento con el valor 1 apartir del index 50
+console.log(conjuntoNumeros.indexOf(1, 50)); // -1 : NO EXISTE
+// Encuentra el primer elemento con el valor 1 apartir del elemento -3
+console.log(conjuntoNumeros.indexOf(1, -3)) // 9
 
-const index2 = arrayNumerico.indexOf(5);
-console.log(index2); // 4
-const existe2 = arrayNumerico.includes(5);
-console.log(existe2); // true
-
-function inventario(name) {
-  const arrayRopa = ["short", "playera", "pantalon", "camisa", "jersey"];
-
-  console.log(arrayRopa);
-
-  console.log(`Valor del index name(${name}) es: ${arrayRopa.indexOf(name)}`);
-  console.log(arrayRopa.filter((item) => item !== name));
-  console.log(arrayRopa);
-}
-inventario("pantalon");
