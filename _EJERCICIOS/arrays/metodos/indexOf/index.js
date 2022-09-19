@@ -9,7 +9,7 @@
  *
  * indexOf() compara los elementos haciendo una igualdad estricta. Funciona con valores primitivos.
  *
- * Sintaxis: arrray.indexOf(seachElement, fromIndex)
+ * Sintaxis: array.indexOf(seachElement, fromIndex)
  * Donde:
  *  - searchElement: El valor del elemento a buscar.
  *  - fromIndex: El valor de indice desde donde comenzará la busqueda.
