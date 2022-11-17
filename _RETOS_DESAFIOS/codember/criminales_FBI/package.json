@@ -1,0 +1,11 @@
+{
+  "name": "criminales_FBI",
+  "version": "1.0.0",
+  "description": "Reto codember",
+  "main": "index.js",
+  "author": "icao",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
+}
