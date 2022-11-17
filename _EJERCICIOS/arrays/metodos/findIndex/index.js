@@ -44,9 +44,9 @@ console.log(
       (element) => element * 2
     );
 
-    console.log(index); // 0, 1, 2
+    console.log(index); // 0
     console.log(conjuntoNumerosParamDoble[index] + 1); // index alternativo
-    console.log(conjuntoNumeros[index]); // 2, 7, 1 - no muta el arreglo conjuntoNumeros
+    console.log(conjuntoNumeros[index]); // 7000 - muta el arreglo conjuntoNumeros
 
     return numero === 2; // [2]
   })
