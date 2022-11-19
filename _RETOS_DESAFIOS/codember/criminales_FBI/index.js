@@ -29,9 +29,19 @@ Usa el comando "submit" para enviar tu solución con la frase descifrada, en min
 $ submit this is fine
 */
 
+import fetch from 'node-fetch'
 
-function ejemplo() {
-  const teardown = function() {
-    return "hola mundo"
-  }
-}
+const getDataEncrypted = async () => {
+  const respose = await fetch("https://codember.dev/encrypted.txt");
+  const dataText = await respose.text();
+
+  return dataText;
+};
+
+getDataEncrypted().then((res) => {
+  const dataExtracted = res.split(" ");
+  console.log(dataExtracted);
+  const arrayEncryptedCodes = dataExtracted.map((code) => BigInt(code));
+  console.log(arrayEncryptedCodes);
+  // todo: implement a function to read the string word, trying to read each of the characters and compare with 97 - 122 range, which corresponds to a lower case alphabet letter
+});

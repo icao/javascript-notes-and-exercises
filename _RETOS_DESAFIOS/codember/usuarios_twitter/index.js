@@ -81,7 +81,7 @@ const formatData = (data) => {
   function crearObjeto(dato) {
     const objetoCreado = dato.map((usersCollection) => {
       return Object.fromEntries(usersCollection);
-      // TODO: convierte un objetro pero elimina entradas duplicadas. Por ejemplo si existe dos veces la propiedad pages:server  y  pages: blog   . Asigna el ulktimo valor
+      // TODO: convierte un objetro pero elimina entradas duplicadas. Por ejemplo si existe dos veces la propiedad pages:server  y  pages: blog   . Asigna el ulktimo valor 
     });
     return objetoCreado;
   }
