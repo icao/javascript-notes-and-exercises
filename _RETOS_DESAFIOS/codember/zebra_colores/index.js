@@ -17,6 +17,14 @@ Ha hecho que las luces sean Arrays y cada posición un color. Y quiere saber qu�
 ['red', 'red', 'blue', 'red', 'red', 'red', 'green'] -> 3, red
 ['red', 'blue', 'red', 'green', 'red', 'green', 'red', 'green'] -> 6, green
 
+['🔴', '🔵', '🔴', '🔵', '🟢'] -> 4, blue  => 4 veces se alterno y el utimo fue 🔵
+['🟢', '🔴', '🔵', '⚫'] -> 2, gray => 2 veces se alterno y el utimo fue ⚫
+['🔵', '🔵', '🔵', '🔵'] -> 1, blue => 1 veces se alterno y el utimo fue 🔵
+['🔴', '🟢', '🔴', '🟢', '🔴', '🟢'] -> 6, green => 6 se alterno y el utimo fue 🟢
+['🔵', '🔴', '🔵', '🔴', '⚫'] -> 4, red => 4 veces se alterno y el utimo fue 🔴
+['🔴', '🔴', '🔵', '🔴', '🔴', '🔴', '🟢'] -> 3, red => 3 veces se alterno y el utimo fue 🔴
+['🔴', '🔵', '🔴', '🟢', '🔴', '🟢', '🔴', '🟢'] -> 6, green => 6 veces se alterno y el ultimo fue 🟢
+
 Fíjate que sólo quiere saber la longitud de cuando dos colores se van alternando. Una vez que se rompe la alternancia de los dos colores, deja de contar.
 
 Ahora que ya sabes esto, https://codember.dev/colors.txt
