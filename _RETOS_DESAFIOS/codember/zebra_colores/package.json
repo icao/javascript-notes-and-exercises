@@ -1,0 +1,11 @@
+{
+  "name": "zebra_colores",
+  "version": "1.0.0",
+  "description": "challenge 03 codember",
+  "main": "index.js",
+  "author": "icao",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
+}
