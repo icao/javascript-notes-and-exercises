@@ -29,7 +29,7 @@ Usa el comando "submit" para enviar tu solución con la frase descifrada, en min
 $ submit this is fine
 */
 
-import fetch from 'node-fetch'
+import fetch from "node-fetch";
 
 const getDataEncrypted = async () => {
   const respose = await fetch("https://codember.dev/encrypted.txt");
@@ -39,9 +39,32 @@ const getDataEncrypted = async () => {
 };
 
 getDataEncrypted().then((res) => {
-  const dataExtracted = res.split(" ");
-  console.log(dataExtracted);
-  const arrayEncryptedCodes = dataExtracted.map((code) => BigInt(code));
-  console.log(arrayEncryptedCodes);
-  // todo: implement a function to read the string word, trying to read each of the characters and compare with 97 - 122 range, which corresponds to a lower case alphabet letter
+  const messageDecrypted = decryptData(res)
+  console.log(messageDecrypted);
 });
+
+function decryptData(data) {
+  let currentCharacter = ""; // variable acumuladora temporal que almacena 3 caracteres
+  let messageDecrypted = []; // Arreglo con los caracteres del mensaje
+
+  // Recorremos toda la cadena de texto caracter por caracter
+  for (const character of data) {
+    currentCharacter = currentCharacter + character; // concatenamos el caracter anterior con el siguiente
+    
+    // por cada iteracion, evaluamos si el caracter actual en la variable acumuladora cumpre la restriccion de ser minuscula en ascii
+    if (Number(currentCharacter) >= 97 && Number(currentCharacter) <= 122) {
+      // agregamos al areglo de caracteres el codigo convertido a caracter
+      messageDecrypted.push(String.fromCharCode(currentCharacter));
+      // limpiamos la variable acumuladora para obtener el sig codigo del siguiente caracter
+      currentCharacter = "";
+    } else if (currentCharacter === " ") { // si encontramos un espacio, agregamos un espacio a nuestro arreglo que contiene todos los caracteres del mensaje decriptado
+      messageDecrypted.push(String.fromCharCode(32));
+    }
+  }
+
+  // retornamos una funcion que reduce el arreglo de caracteres con el mensaje a un string.
+  return messageDecrypted.reduce(
+    (char, acumulador) => char + acumulador
+  );
+
+}
